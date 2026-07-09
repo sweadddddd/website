@@ -1,0 +1,103 @@
+<!-- CONCEPT 5 — taste-skill "minimalist-ui". Règles du skill : monochrome chaud, canvas #F7F6F3,
+     titres serif éditoriaux + corps sans, accents pastel très désaturés (jamais de fond couleur vive),
+     bento asymétrique, bordures 1px #EAEAEA, ombres quasi nulles, CTA noir #111 radius 6px,
+     tags pilules pastel, pas de rounded-full sur gros conteneurs, pas de gradient, pas d'emoji. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Point Paris — Minimalist (concept 5)</title>
+<style>
+  :root{--bg:#f7f6f3;--surface:#fff;--ink:#2f3437;--mut:#787774;--line:#eaeaea;
+    --blue:#e1f3fe;--blue-t:#1f6c9f;--green:#edf3ec;--green-t:#346538;--yellow:#fbf3db;--yellow-t:#956400;--red:#fdebec;--red-t:#9f2f2d;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Helvetica Neue","Segoe UI",system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .serif{font-family:"Newsreader","Playfair Display",Georgia,"Times New Roman",serif;letter-spacing:-.02em;line-height:1.1}
+  .mono{font-family:"SF Mono","JetBrains Mono",ui-monospace,monospace}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+  .ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.14em}
+  .tag{display:inline-block;font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;font-weight:600;border-radius:9999px;padding:3px 10px}
+  .t-blue{background:var(--blue);color:var(--blue-t)}.t-green{background:var(--green);color:var(--green-t)}
+  .t-yellow{background:var(--yellow);color:var(--yellow-t)}.t-red{background:var(--red);color:var(--red-t)}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.96rem;padding:12px 20px;border-radius:6px;transition:background .15s,transform .1s}
+  .btn:active{transform:scale(.98)}
+  .btn-ink{background:#111;color:#fff}.btn-ink:hover{background:#333}
+  .btn-line{background:transparent;color:var(--ink);border:1px solid var(--line)}.btn-line:hover{border-color:#c9c9c6}
+  header{border-bottom:1px solid var(--line);background:rgba(247,246,243,.8);backdrop-filter:blur(8px);position:sticky;top:0;z-index:10}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:70px}
+  .logo{font-size:1.2rem;font-weight:600}
+  .logo small{display:block;font-size:.62rem;letter-spacing:.06em;color:var(--mut);text-transform:uppercase}
+  /* hero */
+  .hero{padding:64px 0 26px}
+  .kick{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--mut);font-weight:600}
+  h1{font-size:clamp(2.6rem,6vw,4.4rem);margin:16px 0 18px;max-width:15ch;font-weight:500}
+  .lead{color:var(--mut);font-size:1.14rem;max-width:52ch;margin:0 0 26px}
+  .cta{display:flex;gap:10px;flex-wrap:wrap}
+  /* bento */
+  .bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(120px,auto);gap:14px;margin-top:26px}
+  .box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px;box-shadow:0 1px 2px rgba(0,0,0,.02)}
+  .box .ic{width:22px;height:22px;color:var(--ink);stroke-width:1.4}
+  .box h3{margin:14px 0 6px;font-size:1.15rem;font-weight:600}
+  .box p{margin:0;color:var(--mut);font-size:.92rem}
+  .b-wide{grid-column:span 2}.b-tall{grid-row:span 2}
+  .stat{display:flex;flex-direction:column;justify-content:space-between}
+  .stat .big{font-size:2.6rem;font-weight:500;letter-spacing:-.02em}
+  .quote{grid-column:span 2;grid-row:span 2;display:flex;flex-direction:column;justify-content:center}
+  .quote .st{color:#d9a400}.quote p{font-size:1.5rem;line-height:1.3;color:var(--ink);margin:12px 0}
+  /* section */
+  section{padding:54px 0}
+  h2{font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:500;margin:0 0 8px}
+  .sub{color:var(--mut);margin:0 0 30px}
+  .row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .list{border-top:1px solid var(--line);margin-top:22px}
+  .list .li{display:flex;justify-content:space-between;gap:14px;padding:15px 2px;border-bottom:1px solid var(--line)}
+  .list .li b{font-weight:600}.list .li span{color:var(--mut)}
+  footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mut);font-size:.86rem}
+  @media(max-width:820px){.bento,.row{grid-template-columns:1fr}.b-wide,.b-tall,.quote{grid-column:auto;grid-row:auto}}
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="p" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.8.3 1.6.7 2.3a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.7.3 1.5.5 2.3.6a2 2 0 0 1 1.7 2z"/></symbol><symbol id="scr" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></symbol><symbol id="bolt" viewBox="0 0 24 24"><polygon points="13 2 4 14 12 14 11 22 20 10 12 10 13 2"/></symbol><symbol id="sh" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></symbol><symbol id="pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol><symbol id="nav" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></symbol></svg>
+
+<header><div class="wrap">
+  <div class="logo">Tech Point Paris<small>Reparation, Paris 12</small></div>
+  <a class="btn btn-ink" href="tel:+33175510215"><svg class="ic"><use href="#p"/></svg>01 75 51 02 15</a>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <span class="kick">Reparation smartphone &amp; tablette</span>
+  <h1 class="serif">Votre téléphone, remis en état sans détour</h1>
+  <p class="lead">Diagnostic sur place, prix annoncé d'avance, au cœur de Montgallet. Un travail propre, à deux pas du métro Reuilly-Diderot.</p>
+  <div class="cta">
+    <a class="btn btn-ink" href="tel:+33175510215"><svg class="ic"><use href="#p"/></svg>Appeler la boutique</a>
+    <a class="btn btn-line" href="#"><svg class="ic"><use href="#nav"/></svg>Itinéraire</a>
+  </div>
+
+  <div class="bento">
+    <div class="box stat b-tall">
+      <span class="tag t-green">Sur place</span>
+      <div><div class="big serif">5 s</div><p>Le temps de vous dire ce qu'il faut faire.</p></div>
+    </div>
+    <div class="box quote">
+      <div class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="serif">«&nbsp;Réparée sans traîner, par un technicien rapide et sympa.&nbsp;»</p>
+      <span style="color:var(--mut);font-size:.86rem">Avis client Google, tablette Samsung (reformulé)</span>
+    </div>
+    <div class="box"><svg class="ic"><use href="#sh"/></svg><h3>Garantie</h3><p><span class="tag t-yellow">à confirmer</span></p></div>
+    <div class="box"><svg class="ic"><use href="#pin"/></svg><h3>73 rue de Reuilly</h3><p>75012 Paris, Lun au Sam 10h a 20h.</p></div>
+  </div>
+</div></div>
+
+<section><div class="wrap">
+  <h2 class="serif">Prestations</h2>
+  <p class="sub">Reparation, vente et accessoires, en un seul point a Reuilly.</p>
+  <div class="row">
+    <div class="box"><svg class="ic"><use href="#scr"/></svg><h3>Réparation d'écran</h3><p>Vitre fissurée, tactile qui ne répond plus, affichage cassé.</p></div>
+    <div class="box"><svg class="ic"><use href="#bolt"/></svg><h3>Batterie et charge</h3><p>Autonomie faible, appareil qui ne charge plus, connecteur.</p></div>
+    <div class="box"><svg class="ic"><use href="#sh"/></svg><h3>Vente et accessoires</h3><p>Reconditionné, coques, verres. <span class="tag t-blue">marques a confirmer</span></p></div>
+  </div>
+  <div class="list">
+    <div class="li"><b>Diagnostic en boutique</b><span>Sur place, sans rendez-vous</span></div>
+    <div class="li"><b>Devis avant réparation</b><span>Rien sans votre accord</span></div>
+    <div class="li"><b>Tarifs indicatifs</b><span class="tag t-yellow">a confirmer</span></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Tech Point Paris, SARL, SIRET 814 456 562 00010, 73 rue de Reuilly, 75012 Paris, 01 75 51 02 15</div></footer>
