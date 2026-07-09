@@ -1,0 +1,119 @@
+<!-- CONCEPT 3 — "Express Promo" : clair, punchy, orienté conversion, tuiles offres type grande enseigne,
+     accent orange urgence + navy. Dials : VARIANCE 7 / MOTION 4 / DENSITY 7. Mood : enseigne de rue, deals. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Point Paris — Express Promo (concept 3)</title>
+<style>
+  :root{--bg:#eef1f6;--navy:#132a4a;--ink:#182234;--mut:#5b677d;--line:#dde3ee;--card:#fff;--acc:#ff6a1a;--acc-dk:#e85608;--blue:#1d6fe0;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.45;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 18px}
+  .ic{width:1.1em;height:1.1em;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.16em}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;border-radius:8px;padding:14px 22px;font-size:1rem;transition:transform .1s}
+  .btn:active{transform:translateY(1px)}
+  .btn-acc{background:var(--acc);color:#fff;box-shadow:0 8px 20px -8px rgba(255,106,26,.8)}.btn-acc:hover{background:var(--acc-dk)}
+  .btn-nav{background:#fff;color:var(--navy);border:2px solid #fff}.btn-nav:hover{background:transparent;color:#fff}
+  /* promo bar */
+  .pbar{background:var(--acc);color:#fff;text-align:center;font-weight:800;font-size:.9rem;padding:9px;letter-spacing:.3px}
+  /* header */
+  header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:20}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:12px}
+  .logo{display:flex;align-items:center;gap:9px;font-weight:900;font-size:1.15rem;letter-spacing:.4px}
+  .logo .m{width:34px;height:34px;border-radius:8px;background:var(--acc);display:grid;place-items:center;font-weight:900;font-size:14px}
+  /* hero */
+  .hero{background:linear-gradient(120deg,var(--navy),#0f2038);color:#fff}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center;padding:40px 18px 44px}
+  .flash{display:inline-block;background:#fff;color:var(--acc);font-weight:900;font-size:.78rem;padding:5px 12px;border-radius:6px;letter-spacing:.5px;text-transform:uppercase}
+  h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.04;letter-spacing:-1px;margin:14px 0 12px;font-weight:900}
+  h1 .y{color:#ffd23f}
+  .lead{color:#cdd8ee;font-size:1.08rem;max-width:44ch;margin:0 0 20px}
+  .cta{display:flex;gap:10px;flex-wrap:wrap}
+  /* hero offer card */
+  .offer{background:#fff;color:var(--ink);border-radius:14px;padding:22px;box-shadow:0 24px 50px -24px rgba(0,0,0,.5)}
+  .offer .row{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px dashed var(--line);font-size:.96rem}
+  .offer .row:last-child{border-bottom:0}
+  .offer .row b{font-weight:800}
+  .offer .price{color:var(--acc);font-weight:900}
+  .offer .todo{background:#fff2e8;border:1px dashed var(--acc);color:var(--acc-dk);font-size:.76rem;font-weight:800;padding:1px 7px;border-radius:5px}
+  .offer h3{margin:0 0 6px;font-size:1.1rem}
+  .offer small{color:var(--mut)}
+  /* trust strip */
+  .strip{background:#fff;border-bottom:1px solid var(--line)}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+  .strip .i{display:flex;gap:10px;align-items:center;padding:15px 16px;border-left:1px solid var(--line);font-weight:700;font-size:.92rem}
+  .strip .i:first-child{border-left:0}
+  .strip .ic{color:var(--acc);width:22px;height:22px}
+  .strip small{display:block;color:var(--mut);font-weight:500;font-size:.8rem}
+  /* offer tiles */
+  section{padding:48px 0}
+  .head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:20px}
+  h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:900;letter-spacing:-.5px;margin:0}
+  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .tile{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;transition:transform .13s,box-shadow .13s;position:relative;overflow:hidden}
+  .tile:hover{transform:translateY(-5px);box-shadow:0 18px 34px -20px rgba(19,42,74,.5)}
+  .tile .badge{position:absolute;top:12px;right:12px;background:var(--acc);color:#fff;font-size:.68rem;font-weight:900;padding:3px 8px;border-radius:20px;text-transform:uppercase}
+  .tile .ic{width:32px;height:32px;color:var(--blue)}
+  .tile h3{margin:12px 0 4px;font-size:1.08rem}
+  .tile p{margin:0 0 8px;color:var(--mut);font-size:.87rem}
+  .tile .from{font-weight:900;color:var(--navy)}.tile .from .todo{font-size:.72rem;background:#fff2e8;border:1px dashed var(--acc);color:var(--acc-dk);font-weight:800;padding:1px 7px;border-radius:5px}
+  /* big cta */
+  .band{background:var(--navy);color:#fff;border-radius:16px;padding:34px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+  .band h2{color:#fff}.band p{margin:6px 0 0;color:#cdd8ee}
+  footer{color:var(--mut);font-size:.85rem;padding:26px 0;text-align:center}
+  @media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.tiles{grid-template-columns:repeat(2,1fr)}.strip .wrap{grid-template-columns:repeat(2,1fr)}.strip .i:nth-child(3){border-left:0}}
+  @media(max-width:560px){.tiles,.strip .wrap{grid-template-columns:1fr}.strip .i{border-left:0}}
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="p" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.8.3 1.6.7 2.3a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.7.3 1.5.5 2.3.6a2 2 0 0 1 1.7 2z"/></symbol><symbol id="scr" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></symbol><symbol id="bolt" viewBox="0 0 24 24"><polygon points="13 2 4 14 12 14 11 22 20 10 12 10 13 2"/></symbol><symbol id="drop" viewBox="0 0 24 24"><path d="M12 2.7l5.7 5.7a8 8 0 1 1-11.4 0z"/></symbol><symbol id="bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></symbol><symbol id="sh" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></symbol><symbol id="clk" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol><symbol id="pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol><symbol id="nav" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></symbol></svg>
+
+<div class="pbar">Écran cassé aujourd'hui ? Passez en boutique, diagnostic gratuit sur place</div>
+<header><div class="wrap">
+  <div class="logo"><span class="m">TP</span>Tech Point Paris</div>
+  <a class="btn btn-acc" href="tel:+33175510215"><svg class="ic"><use href="#p"/></svg>01 75 51 02 15</a>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div>
+    <span class="flash">Réparation express &middot; Paris 12</span>
+    <h1>Réparez votre <span class="y">smartphone</span> pendant que vous attendez</h1>
+    <p class="lead">Écran, batterie, panne : diagnostic sur place au cœur de Montgallet, métro Reuilly-Diderot.</p>
+    <div class="cta">
+      <a class="btn btn-acc" href="tel:+33175510215"><svg class="ic"><use href="#p"/></svg>Appeler maintenant</a>
+      <a class="btn btn-nav" href="#"><svg class="ic"><use href="#nav"/></svg>Itinéraire</a>
+    </div>
+  </div>
+  <div class="offer">
+    <h3>Réparations les plus demandées</h3>
+    <small>Prix indicatifs à confirmer en boutique</small>
+    <div class="row"><span><b>Écran smartphone</b></span><span class="price"><span class="todo">à partir de …</span></span></div>
+    <div class="row"><span><b>Batterie</b></span><span class="price"><span class="todo">à partir de …</span></span></div>
+    <div class="row"><span><b>Désoxydation</b></span><span class="price"><span class="todo">devis</span></span></div>
+    <div class="row"><span>Diagnostic en boutique</span><b style="color:var(--blue)">Gratuit</b></div>
+  </div>
+</div></div>
+
+<div class="strip"><div class="wrap">
+  <div class="i"><svg class="ic"><use href="#clk"/></svg><span>Réparation rapide<small><span style="color:var(--acc-dk)">délai à confirmer</span></small></span></div>
+  <div class="i"><svg class="ic"><use href="#sh"/></svg><span>Garantie réparation<small><span style="color:var(--acc-dk)">durée à confirmer</span></small></span></div>
+  <div class="i"><svg class="ic"><use href="#pin"/></svg><span>73 rue de Reuilly<small>75012 Paris</small></span></div>
+  <div class="i"><svg class="ic"><use href="#clk"/></svg><span>Lun au Sam<small>10h à 20h</small></span></div>
+</div></div>
+
+<section><div class="wrap">
+  <div class="head"><h2>Nos services</h2><a class="btn btn-acc" style="padding:10px 16px" href="tel:+33175510215">Un devis ? Appelez</a></div>
+  <div class="tiles">
+    <div class="tile"><span class="badge">Top</span><svg class="ic"><use href="#scr"/></svg><h3>Réparation d'écran</h3><p>Vitre, tactile, affichage. Smartphone et tablette.</p><div class="from"><span class="todo">dès … €</span></div></div>
+    <div class="tile"><svg class="ic"><use href="#bolt"/></svg><h3>Batterie &amp; charge</h3><p>Autonomie, charge, connecteur.</p><div class="from"><span class="todo">dès … €</span></div></div>
+    <div class="tile"><svg class="ic"><use href="#drop"/></svg><h3>Désoxydation</h3><p>Contact avec l'eau, pannes diverses.</p><div class="from"><span class="todo">devis</span></div></div>
+    <div class="tile"><svg class="ic"><use href="#bag"/></svg><h3>Vente &amp; accessoires</h3><p>Reconditionné, coques, verres, chargeurs.</p><div class="from"><span class="todo">marques à confirmer</span></div></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="band">
+    <div><h2>Besoin d'une réparation aujourd'hui&nbsp;?</h2><p>Appelez la boutique, on vous dit tout de suite ce qu'il en est.</p></div>
+    <a class="btn btn-acc" href="tel:+33175510215"><svg class="ic"><use href="#p"/></svg>01 75 51 02 15</a>
+  </div>
+</div></section>
+
+<footer>Tech Point Paris &middot; SARL &middot; SIRET 814 456 562 00010 &middot; 73 rue de Reuilly, 75012 Paris</footer>
