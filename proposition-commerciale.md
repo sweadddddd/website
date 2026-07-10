@@ -29,18 +29,20 @@ première seconde, pas un site «&nbsp;correct pour un petit commerce&nbsp;».
   barre fixe en bas sur mobile. Un client à l'écran cassé vous appelle en un seul tap.
 - **Adresse, métro et horaires immédiats**, plus un bouton «&nbsp;Itinéraire&nbsp;» qui ouvre
   Google Maps.
-- **Une vraie énergie visuelle** : accueil percutant, bloc de réassurance (diagnostic, délai,
-  garantie, boutique), grille de services illustrée, avis client mis en avant. Le niveau de finition
-  vise celui des enseignes qui inspirent confiance, pas le site bricolé.
+- **Un design d'enseigne moderne** (dans l'esprit des grands sites tech type LDLC) : barre de
+  recherche, navigation par univers, accueil promo, tuiles de services illustrées, tuiles
+  «&nbsp;Seconde vie / Garantie / Nous trouver&nbsp;». Le niveau de finition vise celui des enseignes
+  qui inspirent confiance, pas le site bricolé.
+- **De vrais visuels intégrés** : photo d'atelier en accueil et visuels produits sur chaque service
+  (écran, batterie, vente, accessoires), optimisés pour un chargement rapide. Ce sont des visuels
+  illustratifs, jamais présentés comme la façade réelle tant qu'il n'y a pas de vraies photos.
 - **L'avis positif réel reformulé** et mis en scène comme preuve concrète.
+- **Carte Google Maps + horaires + itinéraire** en bas de page, pour venir sans hésiter.
 - **Référencement local intégré dès la construction** : titres et descriptions «&nbsp;réparation
   téléphone / tablette Paris 12 / Reuilly / Montgallet&nbsp;», balisage `LocalBusiness` (adresse,
   téléphone, horaires) lu par Google pour les recherches «&nbsp;près de moi&nbsp;».
 - **Le contenu de votre fiche Google Business prêt à publier** (nom, catégorie, description, horaires).
 - **Mentions légales** conformes (SIRET, éditeur), prêtes à compléter à la mise en ligne.
-- **Des emplacements photo déjà câblés** : les visuels du site se génèrent en une commande dès
-  qu'on branche la clé image, sans reconstruire le site. En attendant vos vraies photos de boutique,
-  rien n'est présenté comme votre façade réelle.
 
 Le site est honnête : ce qui n'est pas encore confirmé (garantie exacte, délai moyen, marques,
 tarifs, horaire du dimanche) apparaît comme «&nbsp;à confirmer&nbsp;» plutôt qu'inventé. Vous nous
@@ -63,7 +65,7 @@ donnez ces éléments, on les intègre.
 
 | Élément | Inclus | Prix |
 |---|---|---|
-| **Mise en place (setup)** | Site livré et mis en ligne, contenu intégré, visuels générés, référencement local de base, mentions légales, fiche Google Business prête à publier | **290 €** (une fois) |
+| **Mise en place (setup)** | Site livré et mis en ligne, contenu intégré, visuels illustratifs, carte et itinéraire, référencement local de base, mentions légales, fiche Google Business prête à publier | **290 €** (une fois) |
 | **Abonnement Sérénité** | Hébergement, sauvegarde, nom de domaine, 2 modifications par mois (horaires, tarifs, photos), support | **29 €/mois** |
 | **Option Visibilité locale** *(recommandée ici)* | Création et optimisation de la fiche Google Business, suivi des mots-clés locaux, conseils avis clients | **+25 €/mois** (soit 54 €/mois) |
 
