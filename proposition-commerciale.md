@@ -1,6 +1,9 @@
 # Proposition commerciale — Tech Point Paris
 
-*Document de travail à présenter au gérant. Mis à jour le 8 juillet 2026.*
+*Document de travail à présenter au gérant. Mis à jour le 10 juillet 2026.*
+
+> **Version présentation (PowerPoint)** : `proposition-commerciale.pptx` (8 slides, à projeter/envoyer).
+> **Review SEO détaillée** : `seo-review.md`. Ce document-ci est la version longue rédigée.
 
 ## 1. Le constat (factuel)
 
