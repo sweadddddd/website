@@ -3,3 +3,4 @@ package-lock.json
 package.json
 .agents/
 .DS_Store
+generated-images/
